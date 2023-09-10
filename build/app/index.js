@@ -21,6 +21,9 @@ function initServer() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = express();
         app.use(body_parser_1.default.json());
+        app.get("/", (req, res) => {
+            res.json("Hello Aditya Gupta");
+        });
         const graphqlServer = new server_1.ApolloServer({
             typeDefs: `
     type Query{
