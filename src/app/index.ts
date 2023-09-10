@@ -8,7 +8,7 @@ export async function initServer() {
   const app = express();
   app.use(bodyParser.json());
   app.get("/", (req: any, res: any) => {
-    res.json("Hello Aditya Gupta");
+    res.status(200).json("Hello Aditya Gupta");
   });
   const graphqlServer = new ApolloServer({
     typeDefs: `
